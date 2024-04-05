@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>increment number</title>
+    <style>
+        body{
+            margin:0 ;
+            padding: 0;
+            height:100vh ;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background:linear-gradient(red,yellow,orange) ;
+        }
+        .num{
+            height:400px ;
+            width:400px ;
+            background-color: white;
+            color: black;
+            border:3px gray solid;
+        }
+        h3{
+        font-size:40px ;
+        font-family: 'Times New Roman', Times, serif;
+        }
+        #increment-num{
+            font-size:40px ;
+        }
+        .number{
+            height:40px ;
+            width:300px ;
+            background-color: rgb(205, 10, 10);
+            border:2px white solid ;
+            border-radius:10px ;
+            color:white;
+            font-size:30px ;
+        }
+        #text{
+            font-size:40px ;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="num">
+       <h3>number incriment</h3>
+       <h1 id="increment-num">0</h1>
+       <button class="number"onclick="increment()">Result</button>
+       <button class="number"onclick="save()">Save</button>
+       <p id="text">prepared text</p>
+       
+
+    </div>
+</body>
+<script>
+    let count = 0
+    function increment(){
+       count=count+1 
+       document.getElementById('increment-num').innerHTML=count
+    }
+    increment();
+
+    function save(){
+        let counttar= count + "-"
+        document.getElementById('text').innerHTML +=counttar
+    }
+    save()
+</script>
+</html>
